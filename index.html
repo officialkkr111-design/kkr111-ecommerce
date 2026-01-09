@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>KKR111 | Coming Soon</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{box-sizing:border-box}
+body{
+    margin:0;
+    font-family: 'Segoe UI', sans-serif;
+    background:radial-gradient(circle at top,#020617,#000);
+    color:#fff;
+    overflow-x:hidden;
+}
+
+/* HEADER */
+header{
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:linear-gradient(135deg,#1e3a8a,#020617);
+    padding:18px 25px;
+    box-shadow:0 10px 40px rgba(0,0,0,.7);
+}
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.logo{
+    font-size:32px;
+    font-weight:900;
+    letter-spacing:4px;
+    animation:glow 2s infinite alternate;
+}
+.logo span{color:#38bdf8}
+
+nav a{
+    color:#fff;
+    text-decoration:none;
+    margin-left:18px;
+    font-weight:500;
+    transition:.3s;
+}
+nav a:hover{color:#38bdf8}
+
+/* SECTIONS */
+section{
+    padding:80px 20px;
+}
+.hero{
+    text-align:center;
+    animation:fadeUp 1.5s ease;
+}
+.hero h1{
+    font-size:52px;
+}
+.hero p{
+    max-width:720px;
+    margin:auto;
+    opacity:.9;
+}
+.coming{
+    margin-top:20px;
+    font-size:22px;
+    color:#38bdf8;
+    animation:pulse 1.5s infinite;
+}
+
+/* PRODUCTS */
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:24px;
+    perspective:1000px;
+}
+.card{
+    background:#020617;
+    border-radius:20px;
+    padding:24px;
+    position:relative;
+    transition:.4s;
+    transform-style:preserve-3d;
+}
+.card:hover{
+    transform:rotateY(8deg) rotateX(6deg) translateY(-12px);
+    box-shadow:0 0 35px #38bdf8;
+}
+.card::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    border-radius:20px;
+    background:linear-gradient(120deg,transparent,#38bdf8,transparent);
+    opacity:0;
+    transition:.4s;
+}
+.card:hover::before{opacity:.3}
+.card h3{margin:0 0 10px}
+.card p{font-size:14px;opacity:.8}
+.badge{
+    background:#38bdf8;
+    color:#000;
+    padding:6px 14px;
+    border-radius:20px;
+    font-size:12px;
+    display:inline-block;
+    margin-top:14px;
+}
+
+/* TERMS */
+.terms p{
+    max-width:800px;
+    margin:auto;
+    line-height:1.7;
+    opacity:.9;
+}
+
+/* CONTACT */
+.contact{
+    text-align:center;
+}
+.social a{
+    color:#38bdf8;
+    margin:0 12px;
+    text-decoration:none;
+    font-weight:500;
+}
+
+/* FOOTER */
+footer{
+    background:#020617;
+    padding:30px;
+    text-align:center;
+    font-size:14px;
+    opacity:.85;
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp{
+    from{opacity:0;transform:translateY(40px)}
+    to{opacity:1;transform:translateY(0)}
+}
+@keyframes pulse{
+    0%,100%{opacity:1}
+    50%{opacity:.4}
+}
+@keyframes glow{
+    from{text-shadow:0 0 10px #38bdf8}
+    to{text-shadow:0 0 28px #38bdf8}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+<div class="logo">KKR<span>111</span></div>
+<div>
+<a href="#home">Home</a>
+<a href="#products">Products</a>
+<a href="#terms">Terms</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+</header>
+
+<section id="home" class="hero">
+<h1>KKR111 E-Commerce Store</h1>
+<p>A modern, secure and trusted online shopping platform.  
+We are working behind the scenes to launch something powerful.</p>
+<div class="coming">🚀 COMING SOON</div>
+</section>
+
+<section id="products">
+<h2 style="text-align:center">Products (Coming Soon)</h2>
+<div class="products">
+
+<script>
+for(let i=1;i<=15;i++){
+document.write(`
+<div class="card">
+<h3>Product ${i}</h3>
+<p>Premium quality product designed for daily and modern usage.</p>
+<span class="badge">Coming Soon</span>
+</div>
+`);
+}
+</script>
+
+</div>
+</section>
+
+<section id="terms" class="terms">
+<h2 style="text-align:center">Terms & Privacy</h2>
+<p>
+KKR111 is a coming-soon e-commerce platform. All displayed products are for preview purposes only.
+User privacy and data protection are respected. No personal data is shared with third parties.
+Payments, shipping, and order processing will be activated after official launch.
+Fraud prevention and basic security practices are followed to ensure a safe experience.
+</p>
+</section>
+
+<section id="contact" class="contact">
+<h2>Contact Us</h2>
+<p>
+📞 Phone: <b>8053419204</b><br>
+📧 Email: <b>officialkkr111@gmail.com</b>
+</p>
+
+<div class="social">
+<a href="#">Facebook</a>
+<a href="#">Instagram</a>
+<a href="#">WhatsApp</a>
+<a href="#">YouTube</a>
+</div>
+</section>
+
+<footer>
+© 2026 KKR111 | Official E-Commerce Platform
+</footer>
+
+</body>
+</html>
